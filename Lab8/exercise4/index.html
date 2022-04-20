@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<body >
+    <p id="para">
+        The Weather is so nice in Kansas.<br>
+        I can not wait for summer!
+    </p>
+    <div>
+        <label><u>Border</u></label>
+        <br>
+        <label>Red Value </label><input type="text" id="rV"><br>
+        <label>Green Value </label><input type="text" id="gV"><br>
+        <label>Blue Value </label><input type="text" id="bV"><br>
+        <label>Width </label><input type="text" id="wV"><br>
+    </div>
+    <br>
+    <div>
+        <label><u>Background Color</u></label>
+        <br>
+        <label>Red Value </label><input type="text" id="rB"><br>
+        <label>Green Value </label><input type="text" id="gB"><br>
+        <label>Blue Value </label><input type="text" id="bB"><br>
+    </div>
+    <p>All Colors in RGB 0-255</p>
+    <button onclick="colorChange()">Change Colors</button>
+    <script>
+        function colorChange()
+        {
+            var rBorder = document.getElementById("rV").value;
+            var gBorder = document.getElementById("gV").value;
+            var bBorder = document.getElementById("bV").value;
+            var wBorder = document.getElementById("wV").value;
+
+            var rBackG = document.getElementById("rB").value;
+            var gBackG = document.getElementById("gB").value;
+            var bBackG = document.getElementById("bB").value;
+
+            para.style.border = "solid";
+            para.style.borderColor = 'rgb('+rBorder+','+gBorder+','+bBorder+')';
+            para.style.backgroundColor = 'rgb('+rBackG+','+gBackG+','+bBackG+')';
+            para.style.borderWidth = ''+wBorder+'px';
+        }
+    </script>
+</body>
+</html>

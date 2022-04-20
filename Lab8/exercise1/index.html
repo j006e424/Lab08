@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <body>
+        <div>
+            <label>Password:</label>
+            <input type="password" id="first">
+        </div>
+        <div>
+            <label>Re-Enter Password</label>
+            <input type="password" id="second">
+        </div>
+        <button onclick="validate()">Validate</button>
+        <script>
+            function validate()
+            {
+                var p1 = document.getElementById("first");
+                var p2 = document.getElementById("second");
+                if((p1.value != p2.value) && ((p1.value.length < 8) || (p2.value.length < 8)))
+                {
+                    alert("the passwords entered don't match\nthe passwords are not at least 8 characters long");
+                }
+                else if(p1.value != p2.value)
+                {
+                    alert("the passwords entered don't match");
+                }
+                else if((p1.value.length < 8) || (p2.value.length < 8))
+                {
+                    alert("the passwords are not at least 8 characters long");
+                }
+                else
+                {
+                    alert("Passwords Validated Sucessfully");
+                }
+            }
+        </script>
+    </body>
+</html>
